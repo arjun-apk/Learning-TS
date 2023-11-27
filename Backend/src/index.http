@@ -1,0 +1,32 @@
+# get all items
+GET http://localhost:8080/api/menu/items
+###
+
+# get a single item using an id parameter
+GET http://localhost:8080/api/menu/items/1
+###
+
+# create an item
+POST http://localhost:8080/api/menu/items/
+Content-Type: application/json
+
+{
+  "name": "Salad",
+  "price": 499,
+  "description": "Fresh",
+  "image": "https://images.ctfassets.net/23aumh6u8s0i/5pnNAeu0kev0P5Neh9W0jj/5b62440be149d0c1a9cb84a255662205/whatabyte_salad-sm.png"
+}
+###
+
+# update an item using an id parameter
+PUT http://localhost:8080/api/menu/items/1
+Content-Type: application/json
+
+{
+  "price": 499
+}
+###
+
+# remove an item using an id parameter
+DELETE http://localhost:8080/api/menu/items/6
+###
